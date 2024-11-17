@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="linktree.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <title>Linktree</title>
+</head>
+
+<script>
+    function applyFadeEffects() {
+        $("body").hide().fadeIn(800);
+        
+        setTimeout(function() {
+            $("#ayaya").css('visibility', 'visible').hide().fadeIn(800);
+        }, 1000);
+
+        setTimeout(function() {
+            $("#canil").css('visibility', 'visible').hide().fadeIn(400);
+        }, 2300);
+
+        setTimeout(function() {
+            $("#xwitter").css('visibility', 'visible').hide().fadeIn(400);
+        }, 2500);
+
+        setTimeout(function() {
+            $("#portifolio").css('visibility', 'visible').hide().fadeIn(400);
+        }, 2700);
+
+        setTimeout(function() {
+            $("#kasino").css('visibility', 'visible').hide().fadeIn(400);
+        }, 2900);
+
+        setTimeout(function() {
+            $("#frase").css('visibility', 'visible').hide().fadeIn(400);
+        }, 4000);
+    };
+
+    $(document).ready(function() {
+        applyFadeEffects();
+    });
+
+    $(window).on('pageshow', function(event) {
+        if (event.originalEvent.persisted) {
+            
+            $("#ayaya, #canil, #xwitter, #portifolio, #kasino, #frase").css('visibility', 'hidden');
+            applyFadeEffects();
+
+            
+
+        }
+    });
+</script>
+
+<body>
+    <div class="informacoes"> <!--Imagem de perfil-->
+        <div class="perfil">
+            <img src="img/frame 1.png" alt="imagem_perfil">
+        </div>
+
+        <div class="nome_frase" id="ayaya">
+            <p class="nome"><b>henriquexdm</b></p>
+            <p class="frase">"Meu nome é Henrique Duarte e eu tenho um sonho a realizar"</p>
+        </div>
+
+        <div class="opcoes">
+            <div class="botao" id="canil">
+                <i class="fa-brands fa-youtube"></i>
+                <a href="https://www.youtube.com/">Youtube</a>
+            </div>
+
+            <div class="botao" id="xwitter">
+                <i class="fa-brands fa-x-twitter"></i>
+                <a href="https://x.com/">Twitter / X</a>
+            </div>
+
+            <div class="botao" id="portifolio">
+                <i class="fa-solid fa-image"></i>
+                <a href="../um site aí/pages/portifoliobasico.html">Portifólio</a>
+            </div>
+
+            <div class="botao" id="kasino">
+                <i class="fa-solid fa-video"></i>
+                <a href="https://www.youtube.com/watch?v=-wZl_ZhnVg4">Kasino - Can't Get Over</a>
+            </div>
+        </div>
+
+        <div class="frase_baixo" id="frase">
+            <p>Feito por mim mesmo.</p>
+        </div>
+
+    </div>
+</body>
+</html>
